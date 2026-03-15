@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/*
+    Gus & Luz Hotel & Travel Stylesheet
+    Author: Jose Sanchez
+    Date: 2/11/2026
+
+    Filename: gl_styles5.css
+*/
+
+/* Font Styles */
+.corinthia-regular {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corinthia-bold {
+  font-family: "Corinthia", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Fade-in Animation on Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-in Animation */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+.intro, .navigation {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+.title {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+.hotels h2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* HTML & Body Styles */
+
+.mobile-wrapper {
+    max-width: 500px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    background-color: #e5f3fc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* Logo Styles */
+.logo {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+
+/* Navigation Menu Styles*/
+.navigation {
+    max-width: 100%;
+    margin-bottom: 30px ;
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 5px 0;
+    background-color: #e5f3fc;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    background-color: #cfedff;
+}
+
+/* Main Styles */
+.main {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+
+/* Title Styles */
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2 {
+    text-decoration: underline #e5f3fc;
+}
+
+.intro {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/* Hotel Styles */
+.hotels h2 {
+    font-size: 2rem;
+}
+
+.hotels h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px #cfedff;
+}
+
+.marriott, .avid {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.hotel1, .hotel2 {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.button {
+    width: 50%;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    background-color: #e5f3fc;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 6px #cfedff,
+        inset 2px 2px 6px white,
+        2px 2px 2px rgb(192, 192, 192);
+}
+
+.add-info {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding-bottom: 30px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #e5f3fc;
+    padding: 10px 0;
+    font-family: "Inter", sans-serif;
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 400px) {
+    .navigation a {
+        font-size: 1.2rem;
+    }
+}

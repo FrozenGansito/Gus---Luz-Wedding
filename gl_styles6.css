@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/*
+    Gus & Luz Hotel & Travel Stylesheet
+    Author: Jose Sanchez
+    Date: 2/11/2026
+
+    Filename: gl_styles5.css
+*/
+
+/* Font Styles */
+.corinthia-regular {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corinthia-bold {
+  font-family: "Corinthia", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Fade-in Animation on Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-in Animation */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+.intro, .navigation {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+.title {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* HTML & Body Styles */
+
+.mobile-wrapper {
+    max-width: 500px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    background-color: #e5f3fc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* Logo Styles */
+.logo {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+
+/* Navigation Menu Styles*/
+.navigation {
+    max-width: 100%;
+    margin-bottom: 30px ;
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 5px 0;
+    background-color: #e5f3fc;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    background-color: #cfedff;
+}
+
+
+/* Title Styles */
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: "Inter", sans-serif;
+    text-decoration: underline #e5f3fc;
+}
+
+.intro {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+p {
+    margin: 0 40px;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Gallery Styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    gap: 12px;
+    width: 95%;
+    margin: 30px auto;
+    border-top: 3px solid #e5f3fc;
+    padding-top: 50px;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+
+/* Lightbox Styles */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox img {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 6px;
+    user-select: none;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+
+/* Lightbox Close Button */
+#lb-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Arrow Buttons */
+.lb-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lb-prev {
+    left: 12px;
+}
+
+#lb-next {
+    right: 12px;
+}
+
+
+/* Image Counter */
+#lb-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #e5f3fc;
+    margin-top: 30px;
+    padding: 10px 0;
+    font-family: "Inter", sans-serif;
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 400px) {
+    .navigation a {
+        font-size: 1.2rem;
+    }
+}
