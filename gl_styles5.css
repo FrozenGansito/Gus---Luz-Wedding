@@ -54,7 +54,7 @@
     animation: slideIn 1.3s ease forwards;
 }
 
-.title {
+.title, .marriott {
     opacity: 0;
     transform: translateX(-50px);
     animation: slideIn 1.3s ease forwards;
