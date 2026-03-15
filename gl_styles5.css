@@ -43,6 +43,9 @@
 
 /* Slide-in Animation */
 .logo {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     opacity: 0;
     transform: translateY(-50px);
     animation: slideIn 1.3s ease forwards;
@@ -60,7 +63,7 @@
     animation: slideIn 1.3s ease forwards;
 }
 
-.hotels h2, .marriott {
+.hotels h2, .marriott, .avid {
     opacity: 0;
     transform: translateY(50px);
     animation: slideIn 1.3s ease forwards;
@@ -102,12 +105,6 @@ html, body {
 
 
 /* Logo Styles */
-.logo {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .logo img{
     display: block;
     max-width: 60%;
