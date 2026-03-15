@@ -84,7 +84,6 @@
     margin: 0 auto;
     background: white;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 html {
@@ -95,6 +94,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 
