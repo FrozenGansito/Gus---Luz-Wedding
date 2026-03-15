@@ -54,13 +54,13 @@
     animation: slideIn 1.3s ease forwards;
 }
 
-.title, .marriott {
+.title {
     opacity: 0;
     transform: translateX(-50px);
     animation: slideIn 1.3s ease forwards;
 }
 
-.hotels h2 {
+.hotels h2, .marriott {
     opacity: 0;
     transform: translateY(50px);
     animation: slideIn 1.3s ease forwards;
