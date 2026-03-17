@@ -150,7 +150,7 @@ img {
     border-radius: 5px;
 }
 
-.navigation a:hover {
+.navigation a:active {
     background-color: #cfedff;
 }
 
