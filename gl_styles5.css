@@ -32,8 +32,9 @@
 /* Fade-in Animation on Scroll */
 .fade-in {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.3s ease, transform 1.3s ease;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
 }
 
 .fade-in.show {
@@ -63,7 +64,7 @@
     animation: slideIn 1.3s ease forwards;
 }
 
-.hotels h2, .marriott, .avid {
+.marriott, h2 {
     opacity: 0;
     transform: translateY(50px);
     animation: slideIn 1.3s ease forwards;
@@ -113,6 +114,10 @@ html, body {
     display: block;
     max-width: 60%;
     margin: 0 auto;
+}
+
+img {
+    display: block;
 }
 
 
