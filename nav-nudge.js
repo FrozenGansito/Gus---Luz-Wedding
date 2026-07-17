@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.scrollTo({ left: maxScroll, behavior: 'smooth' });
     setTimeout(() => {
       nav.scrollTo({ left: 0, behavior: 'smooth' });
-    }, 650);
+    }, 1650);
   }, 1400);
 });
