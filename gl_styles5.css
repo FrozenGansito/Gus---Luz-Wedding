@@ -76,7 +76,7 @@ img {
     margin: 34px 0 22px;
 }
 
-.marriott, .avid {
+.marriott, .avid, .best-western, .laquinta {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,13 +89,13 @@ img {
     box-shadow: var(--shadow-soft);
 }
 
-.marriott h3, .avid h3 {
+.marriott h3, .avid h3, .best-western h3, .laquinta h3 {
     font-size: 1.3rem;
     font-weight: 500;
     margin: 0;
 }
 
-.hotel1, .hotel2 {
+.hotel1, .hotel2, .hotel3, .hotel4 {
     width: 100%;
     border-radius: var(--radius-sm);
 }
